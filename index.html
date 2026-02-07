@@ -3,200 +3,153 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="A modern, accessible single-page landing page celebrating Vietnam Tết 2026 with traditions, foods, and customs." />
-  <title>Vietnam Tết 2026</title>
+  <meta name="description" content="Doan Tran Minh Thanh — Full-stack Engineer @ KVY Tech. A calm, soulful, opinionated builder from Quang Tri to Ho Chi Minh City, with a subtle Tet 2026 spirit." />
+  <title>Doan Tran Minh Thanh — Personal Vibe</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header" aria-label="Site header">
+  <header class="site-header" aria-label="Header">
     <div class="container header-inner">
-      <div class="brand" aria-label="Vietnam Tết 2026">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span class="brand-name">Vietnam Tết 2026</span>
-      </div>
+      <a class="brand" href="#home" aria-label="Go to top">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span class="brand-name">Thanh</span>
+      </a>
+
       <nav class="site-nav" aria-label="Primary">
-        <a href="#traditions">Traditions</a>
-        <a href="#foods">Foods</a>
-        <a href="#customs">Customs</a>
-        <a href="#plan">Plan</a>
+        <a href="#about">About</a>
+        <a href="#journey">Journey</a>
+        <a href="#projects">Projects</a>
+        <a href="#values">Values</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
   <main id="main">
-    <section class="hero" aria-label="Hero">
+    <section id="home" class="hero section" aria-labelledby="hero-title">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Vietnamese Lunar New Year</p>
-          <h1 class="hero-title">Celebrate Tết 2026</h1>
-          <p class="hero-subtitle">
-            A season of renewal, gratitude, and togetherness—marked by family reunions, meaningful rituals, and joyful wishes for the year ahead.
+          <p class="eyebrow">Tet 2026 • Quiet Light</p>
+          <h1 id="hero-title">Doan Tran Minh Thanh <span>(Thanh)</span></h1>
+          <p class="hero-role">Full-stack Engineer @ KVY Tech</p>
+          <p class="hero-lede">
+            Calm, soulful, opinionated builder crafting digital products with clarity and character.
           </p>
+          <p class="hero-motto">“Build what matters, then refine until it feels inevitable.”</p>
 
-          <div class="hero-meta" role="group" aria-label="Date information">
-            <div class="meta-card" data-reveal>
-              <p class="meta-label">Tết 2026 date</p>
-              <p class="meta-value"><strong>Tuesday, February 17, 2026</strong></p>
-              <p class="meta-note">Plan time for travel, family visits, and festive meals.</p>
-            </div>
-            <div class="meta-card" data-reveal>
-              <p class="meta-label">Quick highlight</p>
-              <p class="meta-value"><strong>Warm greetings & new beginnings</strong></p>
-              <p class="meta-note">Clean, decorate, honor ancestors, and share luck.</p>
-            </div>
-          </div>
-
-          <div class="hero-actions" role="group" aria-label="Primary actions">
-            <a class="btn btn-primary" href="#traditions">Explore traditions</a>
-            <a class="btn btn-secondary" href="#plan">Simple planning checklist</a>
+          <div class="hero-actions" role="group" aria-label="Hero actions">
+            <a class="btn btn-primary" href="#projects">View projects</a>
+            <a class="btn btn-ghost" href="#contact">Let’s connect</a>
           </div>
         </div>
 
-        <aside class="hero-aside" aria-label="Tết 2026 badge">
-          <div class="badge" data-reveal>
-            <p class="badge-kicker">Tết</p>
-            <p class="badge-year" id="yearBadge" aria-label="Year badge">2026</p>
-            <p class="badge-caption">Soft lantern glow, modern feel</p>
-          </div>
-
-          <div class="cards" aria-label="At a glance">
-            <article class="card" data-reveal>
-              <h2 class="card-title">What Tết means</h2>
-              <p class="card-text">
-                Tết is Vietnam’s most important holiday—welcoming a new lunar year with gratitude, hope, and wishes for prosperity.
-              </p>
-            </article>
-            <article class="card" data-reveal>
-              <h2 class="card-title">How it feels</h2>
-              <p class="card-text">
-                Streets brighten with flowers and lights, homes fill with shared meals, and every greeting carries a fresh-start spirit.
-              </p>
-            </article>
-          </div>
+        <aside class="hero-cards" aria-label="At a glance">
+          <article class="glass" data-reveal>
+            <h2>Now</h2>
+            <p>Building and shipping across frontend, backend, and product details at KVY Tech.</p>
+          </article>
+          <article class="glass" data-reveal>
+            <h2>Focus</h2>
+            <p>Cerebro.xyz, open-source contributions, and thoughtful systems that last.</p>
+          </article>
         </aside>
       </div>
-
-      <div class="hero-divider" aria-hidden="true"></div>
     </section>
 
-    <section id="traditions" class="section" aria-labelledby="traditions-title">
+    <section id="about" class="section" aria-labelledby="about-title">
       <div class="container">
-        <header class="section-header" data-reveal>
-          <h2 id="traditions-title">Brief guide to Tết traditions</h2>
-          <p class="section-lede">
-            Tết traditions blend family values, spiritual gratitude, and symbolic acts meant to invite good fortune for the year ahead.
+        <header class="section-head" data-reveal>
+          <p class="section-kicker">About</p>
+          <h2 id="about-title">A grounded builder with taste for depth</h2>
+        </header>
+        <div class="glass" data-reveal>
+          <p>
+            I care about product feel as much as architecture. I like clear systems, strong opinions held lightly,
+            and software that respects people’s attention.
           </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="journey" class="section" aria-labelledby="journey-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="section-kicker">Journey</p>
+          <h2 id="journey-title">Quang Tri → Ho Chi Minh City</h2>
         </header>
 
-        <div class="grid-3" role="list" aria-label="Traditions overview">
-          <article class="card" role="listitem" data-reveal>
-            <h3 class="card-title">Fresh start</h3>
-            <p class="card-text">Homes are cleaned and decorated so the new year begins with clarity, warmth, and welcoming energy.</p>
+        <ol class="timeline" aria-label="Personal journey timeline">
+          <li class="glass" data-reveal>
+            <h3>Quang Tri</h3>
+            <p>Roots in a quiet place that taught patience, resilience, and discipline.</p>
+          </li>
+          <li class="glass" data-reveal>
+            <h3>Early maker years</h3>
+            <p>Started shipping side projects, learning by building in public.</p>
+          </li>
+          <li class="glass" data-reveal>
+            <h3>Ho Chi Minh City</h3>
+            <p>Moved for growth, faster feedback loops, and bigger product challenges.</p>
+          </li>
+          <li class="glass" data-reveal>
+            <h3>Today</h3>
+            <p>Full-stack Engineer at KVY Tech, blending craft, speed, and long-term thinking.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="section-kicker">Selected projects</p>
+          <h2 id="projects-title">Short list, high intent</h2>
+        </header>
+
+        <div class="cards-grid">
+          <article class="glass" data-reveal>
+            <h3>Cerebro.xyz</h3>
+            <p>A focused product ecosystem built for clarity, productivity, and momentum.</p>
           </article>
-          <article class="card" role="listitem" data-reveal>
-            <h3 class="card-title">Family reunion</h3>
-            <p class="card-text">Meals bring generations together, making time for stories, gratitude, and wishes for health and success.</p>
-          </article>
-          <article class="card" role="listitem" data-reveal>
-            <h3 class="card-title">Respect & remembrance</h3>
-            <p class="card-text">Many families honor ancestors with offerings and prayers—grounding the celebration in heritage and care.</p>
+          <article class="glass" data-reveal>
+            <h3>Open-source work</h3>
+            <p>Practical contributions around tooling, developer workflow, and reusable building blocks.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="foods" class="section alt" aria-labelledby="foods-title">
+    <section id="values" class="section" aria-labelledby="values-title">
       <div class="container">
-        <header class="section-header" data-reveal>
-          <h2 id="foods-title">Festive foods</h2>
-          <p class="section-lede">Two iconic rice cakes often shared during Tết—comforting, symbolic, and made for togetherness.</p>
+        <header class="section-head" data-reveal>
+          <p class="section-kicker">Values / Philosophy</p>
+          <h2 id="values-title">How I build</h2>
         </header>
 
-        <div class="grid-2" aria-label="Food cards">
-          <article class="card food" data-reveal>
-            <div class="food-top">
-              <h3 class="card-title">Bánh chưng</h3>
-              <p class="pill" aria-label="Traditional dish">Traditional</p>
-            </div>
-            <p class="card-text">
-              A square sticky-rice cake filled with mung bean and pork, wrapped in leaves and slow-cooked—often symbolizing the earth and family unity.
-            </p>
-          </article>
-
-          <article class="card food" data-reveal>
-            <div class="food-top">
-              <h3 class="card-title">Bánh tét</h3>
-              <p class="pill" aria-label="Regional favorite">Regional favorite</p>
-            </div>
-            <p class="card-text">
-              A cylindrical sticky-rice cake with savory or sweet fillings, sliced into rounds—popular in the south and perfect for sharing.
-            </p>
-          </article>
-        </div>
+        <ul class="cards-grid values" aria-label="Values list">
+          <li class="glass" data-reveal><strong>Clarity over noise</strong><span>Simple beats flashy when decisions matter.</span></li>
+          <li class="glass" data-reveal><strong>Depth over hype</strong><span>Substance first, polish second, both required.</span></li>
+          <li class="glass" data-reveal><strong>Ship, then sharpen</strong><span>Momentum with craftsmanship, not either-or.</span></li>
+        </ul>
       </div>
     </section>
 
-    <section id="customs" class="section" aria-labelledby="customs-title">
+    <section id="contact" class="section" aria-labelledby="contact-title">
       <div class="container">
-        <header class="section-header" data-reveal>
-          <h2 id="customs-title">Activities & customs</h2>
-          <p class="section-lede">Small gestures carry big meaning—these customs help welcome luck, harmony, and joy.</p>
+        <header class="section-head" data-reveal>
+          <p class="section-kicker">Contact</p>
+          <h2 id="contact-title">Let’s build something meaningful</h2>
         </header>
 
-        <div class="grid-3" role="list" aria-label="Customs list">
-          <article class="card" role="listitem" data-reveal>
-            <h3 class="card-title">Lì xì</h3>
-            <p class="card-text">Red envelopes are given as blessings—often to children and elders—for luck, health, and prosperity.</p>
-          </article>
-          <article class="card" role="listitem" data-reveal>
-            <h3 class="card-title">Visiting family</h3>
-            <p class="card-text">Families visit relatives and neighbors, exchanging New Year wishes and strengthening bonds.</p>
-          </article>
-          <article class="card" role="listitem" data-reveal>
-            <h3 class="card-title">Ancestor altar</h3>
-            <p class="card-text">Offerings and incense express gratitude and invite ancestral blessings for the household.</p>
-          </article>
-          <article class="card" role="listitem" data-reveal>
-            <h3 class="card-title">First-footing</h3>
-            <p class="card-text">The first visitor of the new year is believed to influence the household’s luck—often chosen with care.</p>
-          </article>
-          <article class="card" role="listitem" data-reveal>
-            <h3 class="card-title">Fireworks</h3>
-            <p class="card-text">Light and sound welcome the year with excitement—where permitted, they heighten the festive atmosphere.</p>
-          </article>
-          <article class="card" role="listitem" data-reveal>
-            <h3 class="card-title">Flowers & décor</h3>
-            <p class="card-text">Peach blossoms, apricot blossoms, kumquat trees, and lantern tones add color and symbolic prosperity.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="plan" class="section alt" aria-labelledby="plan-title">
-      <div class="container">
-        <header class="section-header" data-reveal>
-          <h2 id="plan-title">A simple way to plan</h2>
-          <p class="section-lede">A gentle checklist for a calm, meaningful celebration—perfect for mobile-friendly browsing.</p>
-        </header>
-
-        <div class="plan" data-reveal>
-          <ol class="checklist" aria-label="Planning checklist">
-            <li><strong>Pick your key day:</strong> Tuesday, February 17, 2026.</li>
-            <li><strong>Prep the home:</strong> tidy, add flowers, set a warm table.</li>
-            <li><strong>Choose a meal:</strong> include bánh chưng or bánh tét if you can.</li>
-            <li><strong>Make space for respect:</strong> a moment for gratitude and remembrance.</li>
-            <li><strong>Share wishes:</strong> greetings, lì xì, and time with loved ones.</li>
-          </ol>
-
-          <div class="callout" role="note" aria-label="Tip">
-            <h3 class="callout-title">Tip</h3>
-            <p class="callout-text">Scroll to reveal sections—subtle motion, calm energy, and a modern festive palette.</p>
-          </div>
+        <div class="contact-links" data-reveal>
+          <a class="chip" href="https://github.com/mnismt" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="chip" href="https://www.linkedin.com/in/doantranminhthanh" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="chip" href="mailto:thanhdoantranminh@gmail.com">Email</a>
         </div>
       </div>
     </section>
@@ -204,8 +157,8 @@
 
   <footer class="site-footer" aria-label="Footer">
     <div class="container footer-inner">
-      <p class="footer-text">Chúc Mừng Năm Mới 2026</p>
-      <a class="back-to-top" href="#main">Back to top</a>
+      <p>Subtle Tet 2026 spirit — calm beginnings, intentional work.</p>
+      <a href="#home">Back to top</a>
     </div>
   </footer>
 

@@ -1,40 +1,54 @@
-(function () {
+(() => {
   'use strict';
 
-  // Scroll reveal (minimal, accessible, respects reduced motion via CSS)
-  var nodes = Array.prototype.slice.call(document.querySelectorAll('[data-reveal]'));
-  if (!nodes.length) return;
+  const revealTargets = Array.from(document.querySelectorAll('[data-reveal]'));
+  const navLinks = Array.from(document.querySelectorAll('.site-nav a'));
+  const sectionIds = navLinks
+    .map((link) => link.getAttribute('href'))
+    .filter((href) => href && href.startsWith('#'))
+    .map((href) => href.slice(1));
 
-  var yearBadge = document.getElementById('yearBadge');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  function reveal(el) {
-    if (!el.classList.contains('revealed')) el.classList.add('revealed');
-  }
-
-  // If IntersectionObserver isn't available, reveal all.
-  if (!('IntersectionObserver' in window)) {
-    nodes.forEach(reveal);
-    if (yearBadge) yearBadge.classList.add('is-active');
-    return;
-  }
-
-  var io = new IntersectionObserver(
-    function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          reveal(entry.target);
-
-          // Subtle interactivity: glow the 2026 badge when it appears.
-          if (yearBadge && entry.target.contains(yearBadge)) {
-            yearBadge.classList.add('is-active');
+  if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
           }
+        });
+      },
+      { threshold: 0.15 }
+    );
 
-          io.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.15 }
-  );
+    revealTargets.forEach((node) => revealObserver.observe(node));
+  } else {
+    revealTargets.forEach((node) => node.classList.add('is-visible'));
+  }
 
-  nodes.forEach(function (n) { io.observe(n); });
+  if ('IntersectionObserver' in window && sectionIds.length) {
+    const sections = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
+
+    const activeObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const id = entry.target.id;
+          navLinks.forEach((link) => {
+            const active = link.getAttribute('href') === `#${id}`;
+            link.classList.toggle('active', active);
+            if (active) link.setAttribute('aria-current', 'page');
+            else link.removeAttribute('aria-current');
+          });
+        });
+      },
+      { rootMargin: '-40% 0px -50% 0px', threshold: 0.01 }
+    );
+
+    sections.forEach((section) => activeObserver.observe(section));
+  }
 })();
